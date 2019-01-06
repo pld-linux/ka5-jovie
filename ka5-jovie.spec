@@ -1,15 +1,15 @@
-%define		kdeappsver	18.12.0
 %define		qtver		5.9.0
 %define		kaname		jovie
-Summary:	Jovie
+Summary:	Jovie Text-to-Speech subsystem
+Summary(pl.UTF-8):	Jovie - podsystem do zamiany tekstu na mowę (Text-to-Speech)
 Name:		ka5-%{kaname}
-Version:	18.12.0
+Version:	17.08.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+Source0:	http://download.kde.org/Attic/applications/%{version}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	c036b4d0ae6babd0c7d738eae10a9ba1
-URL:		http://www.kde.org/
+URL:		https://www.kde.org/applications/unmaintained/jovie/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
@@ -26,6 +26,12 @@ Jovie -- KDE Text-to-Speech -- is a subsystem within the KDE desktop
 for conversion of text to audible speech. Jovie is currently under
 development and aims to become the standard subsystem for all KDE
 applications to provide speech output.
+
+%description -l pl.UTF-8
+Jovie - KDE Text-to-Speech - to podsystem środowiska KDE do
+przekształcania tekstu na słyszalną mowę. Jovie ma na celu stać się
+standardowym podsystemem dla wszystkich aplikacji KDE, zapewniającym
+wyjście w postaci mowy.
 
 %prep
 %setup -q -n %{kaname}-%{version}
